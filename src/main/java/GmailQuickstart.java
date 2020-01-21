@@ -101,7 +101,8 @@ public class GmailQuickstart {
         /*  AT&T: number@txt.att.net (SMS), number@mms.att.net (MMS)
             T-Mobile: number@tmomail.net (SMS & MMS)
         */
-        String msg = "testMessage";
+        Scanner messageReader = new Scanner(new File("src/msg.txt"));
+        String msg = messageReader.nextLine();
         for (String element: recipients) {
             MimeMessage mm = createEmail(element, user, null, msg, false);
             Message m = sendMessage(service, user, mm);
