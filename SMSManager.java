@@ -13,7 +13,7 @@ public class SMSManager {
         Scanner input = new Scanner(System.in);
         String response;
         while(keepGoing) {
-            System.out.println("Enter \"start\" or \"end\":");
+            System.out.println("Enter \"start\", \"edit\", or \"end\":");
             response = input.nextLine();
             switch(response) {
                 case "start": Process p = Runtime.getRuntime().exec("gradle run");
@@ -37,7 +37,7 @@ public class SMSManager {
         String edit;
         String newText = "default";
         Scanner input = new Scanner(System.in);
-        FileWriter fw = new FileWriter(new File("src/msg.txt"), true);
+        FileWriter fw = new FileWriter(new File("src/msg.txt"), false);
         System.out.print("What would you like to change (M for message, R for recipients): ");
         edit = input.nextLine();
         if (edit.equals("M")) {
