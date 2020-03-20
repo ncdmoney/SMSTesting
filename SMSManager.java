@@ -46,7 +46,7 @@ public class SMSManager {
             fw.write(newText);
             fw.close();
         } else if (edit.equals("R")) {
-            System.out.println("Under construction :(");
+            System.out.println("Please enter as many recipients as you want, separating by Enter:");
         }
         
     }
