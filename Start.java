@@ -1,4 +1,4 @@
-/*import java.text.SimpleDateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,7 +11,7 @@ public class Start {
             Calendar cal = Calendar.getInstance();
             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
             System.out.println(sdf.format(cal.getTime()));
-            if(sdf.format(cal.getTime()).equals("09:11:00")) {
+            if(sdf.format(cal.getTime()).equals(args[0])) {
                 System.out.println("Sending");
                 Process p = Runtime.getRuntime().exec("gradle run");
                 System.out.println("Executed");
@@ -23,4 +23,4 @@ public class Start {
             }
          }
     }
-}*/
+}
